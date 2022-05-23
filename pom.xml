@@ -24,16 +24,16 @@
       <artifactId>junit</artifactId>
       <version>4.11</version>
       <scope>test</scope>
-      <dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-api</artifactId>
-    <version>2.17.2</version>
-</dependency>
-<dependency>
-    <groupId>org.apache.logging.log4j</groupId>
-    <artifactId>log4j-core</artifactId>
-    <version>2.17.2</version>
-</dependency>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.17.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.17.2</version>
     </dependency>
   </dependencies>
 
@@ -79,7 +79,9 @@
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
         </plugin>
- <!--plugin>
+        <!--  -->
+
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-shade-plugin</artifactId>
           <version>2.4.1</version>
@@ -92,15 +94,15 @@
               <configuration>
                 <transformers>
                   <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                    <mainClass>isap.vstu.by.App</mainClass>
+                    <mainClass>org.sonatype.haven.HavenCli</mainClass>
                   </transformer>
                 </transformers>
               </configuration>
             </execution>
           </executions>
-        </plugin> -->
+        </plugin>
 
-      <!--  -->
+        <!--  -->
 
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -137,7 +139,11 @@
         <filtering>true</filtering>
       </resource>
     </resources>
-</build>
+
+  </build>
+
+  <!--  -->
+
 <profiles>
     <profile>
       <id>development</id>
